@@ -43,9 +43,9 @@ spring:
     add-mappings: false
 #mybatis
 mybatis-plus:
-  mapper-locations: mapper/*Dao.xml
-  typeAliasesPackage: net.shopec.entity
-  typeEnumsPackage: net.shopec.entity
+  mapper-locations: mapper/*Mapper.xml
+  typeAliasesPackage: com.dm.shopb2b2c.crm.brand.entity
+  typeEnumsPackage: com.dm.shopb2b2c.crm.brand.entity
   global-config:
     id-type: 3
     #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dm.shopb2b2c.crm.brand.mapper.JukeBrandMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dm.shopb2b2c.crm.brand.entity.JukeBrand">
+        <id column="brand_id" property="brandId" />
+        <result column="name" property="name" />
+        <result column="other_name" property="otherName" />
+        <result column="sort" property="sort" />
+        <result column="be_del" property="beDel" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+    <select id="findJukeAll" resultMap="BaseResultMap">
+        select * from juke_brand;
+    </select>
+
+</mapper>

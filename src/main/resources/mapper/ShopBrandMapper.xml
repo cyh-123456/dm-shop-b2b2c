@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dm.shopb2b2c.shopec.brand.mapper.ShopBrandMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BrandResultMap" type="com.dm.shopb2b2c.shopec.brand.entity.ShopBrand">
+        <id column="id" property="id" />
+        <result column="created_date" property="created_date" />
+        <result column="last_modified_date" property="last_modified_date"/>
+        <result column="version" property="version"/>
+        <result column="orders" property="orders"/>
+        <result column="introduction" property="introduction" />
+        <result column="logo" property="logo" />
+        <result column="name" property="name" />
+        <result column="type" property="type" />
+        <result column="url" property="url" />
+        <result column="brand_id" property="brand_id" />
+    </resultMap>
+
+    <select id="findAllShopBrand" resultMap="BrandResultMap">
+        select * from brand;
+    </select>
+
+    <!--添加数据-->
+    <insert id="addShopBrand" parameterType="com.dm.shopb2b2c.shopec.brand.entity.ShopBrand">
+        insert into brand(id,created_date,last_modified_date,version,orders,introduction,logo,name,type,url,brand_id)
+        values(
+            #{id},
+            #{created_date},
+            #{last_modified_date},
+            #{version},
+            #{orders},
+            #{introduction},
+            #{logo},
+            #{name},
+            #{type},
+            #{url},
+            #{brand_id})
+    </insert>
+
+    <delete id="delAllBrand">
+        delete  from brand
+    </delete>
+
+</mapper>
