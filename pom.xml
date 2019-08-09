@@ -21,6 +21,19 @@
         <java.version>1.8</java.version>
     </properties>
 
+    <!--ApiBoot版本依赖-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.minbox.framework</groupId>
+                <artifactId>api-boot-dependencies</artifactId>
+                <version>2.1.0.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
 
 
@@ -113,6 +126,11 @@
             <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
         </dependency>
 
+        <!--ApiBoot DataSource Switch-->
+        <dependency>
+            <groupId>org.minbox.framework</groupId>
+            <artifactId>api-boot-starter-datasource-switch</artifactId>
+        </dependency>
 
 
         <!-- j2cache 集成-->
@@ -441,6 +459,20 @@
             <version>0.0.1-SNAPAHOT</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/src/main/resources/libs/shopec-b2b2c-0.0.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>fr.xebia.extras</groupId>
+            <artifactId>selma-processor</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- This is the only real dependency you will have in your binaries -->
+        <dependency>
+            <groupId>fr.xebia.extras</groupId>
+            <artifactId>selma</artifactId>
+            <version>1.0</version>
         </dependency>
 
     </dependencies>
