@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dm.shopb2b2c.shopec.type.mapper.ShopGoodsTypeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="ShopGoodsTypeResultMap" type="com.dm.shopb2b2c.shopec.type.entity.ShopGoodsType">
+        <id column="id" property="id" />
+        <result column="created_date" property="created_date" />
+        <result column="last_modified_date" property="last_modified_date"/>
+        <result column="version" property="version"/>
+        <result column="orders" property="orders"/>
+        <result column="general_rate" property="general_rate" />
+        <result column="grade" property="grade" />
+        <result column="name" property="name" />
+        <result column="image" property="image" />
+        <result column="self_rate" property="self_rate" />
+        <result column="seo_description" property="seo_description" />
+        <result column="seo_keywords" property="seo_keywords" />
+        <result column="seo_title" property="seo_title" />
+        <result column="tree_path" property="tree_path" />
+        <result column="parent_id" property="parent_id" />
+    </resultMap>
+
+
+
+    <!--添加数据-->
+    <insert id="addShopGoodsType" parameterType="com.dm.shopb2b2c.shopec.type.entity.ShopGoodsType">
+        insert into product_category(id,created_date,last_modified_date,
+            version,orders,general_rate,grade,name,image,self_rate,
+            seo_description,seo_keywords,seo_title,tree_path,parent_id)
+        values(
+            #{id},
+            #{created_date},
+            #{last_modified_date},
+            #{version},
+            #{orders},
+            #{general_rate},
+            #{grade},
+            #{name},
+            #{image},
+            #{self_rate},
+            #{seo_description},
+            #{seo_keywords},
+            #{seo_title},
+            #{tree_path},
+            #{parent_id})
+    </insert>
+
+
+</mapper>

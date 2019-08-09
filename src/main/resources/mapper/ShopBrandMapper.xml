@@ -3,7 +3,7 @@
 <mapper namespace="com.dm.shopb2b2c.shopec.brand.mapper.ShopBrandMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BrandResultMap" type="com.dm.shopb2b2c.shopec.brand.entity.ShopBrand">
+    <resultMap id="ShopBrandResultMap" type="com.dm.shopb2b2c.shopec.brand.entity.ShopBrand">
         <id column="id" property="id" />
         <result column="created_date" property="created_date" />
         <result column="last_modified_date" property="last_modified_date"/>
@@ -17,7 +17,7 @@
         <result column="brand_id" property="brand_id" />
     </resultMap>
 
-    <select id="findAllShopBrand" resultMap="BrandResultMap">
+    <select id="findAllShopBrand" resultMap="ShopBrandResultMap">
         select * from brand;
     </select>
 
