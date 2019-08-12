@@ -27,7 +27,7 @@
     <insert id="addShopGoodsType" parameterType="com.dm.shopb2b2c.shopec.type.entity.ShopGoodsType">
         insert into product_category(id,created_date,last_modified_date,
             version,orders,general_rate,grade,name,image,self_rate,
-            seo_description,seo_keywords,seo_title,tree_path,parent_id)
+            seo_description,seo_keywords,seo_title,tree_path,parent_id,juke_typeId)
         values(
             #{id},
             #{created_date},
@@ -43,7 +43,8 @@
             #{seo_keywords},
             #{seo_title},
             #{tree_path},
-            #{parent_id})
+            #{parent_id},
+            #{juke_typeId})
     </insert>
 
 

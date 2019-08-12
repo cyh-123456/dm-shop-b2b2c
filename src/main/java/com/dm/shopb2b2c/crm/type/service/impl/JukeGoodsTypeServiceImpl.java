@@ -3,6 +3,7 @@ package com.dm.shopb2b2c.crm.type.service.impl;
 import com.dm.shopb2b2c.crm.type.entity.JukeGoodsType;
 import com.dm.shopb2b2c.crm.type.mapper.JukeGoodsTypeMapper;
 import com.dm.shopb2b2c.crm.type.service.IJukeGoodsTypeService;
+import org.minbox.framework.api.boot.plugin.datasource.annotation.DataSourceSwitch;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
@@ -16,6 +17,7 @@ import java.util.List;
  */
 
 @Service
+@DataSourceSwitch("juke")
 public class JukeGoodsTypeServiceImpl implements IJukeGoodsTypeService {
 
     @Inject

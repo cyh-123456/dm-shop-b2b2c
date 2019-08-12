@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dm.shopb2b2c.crm.product.mapper.JukeProductMapper">
+
+    <!-- 查询映射结果 -->
+    <resultMap id="JukeProResultMap" type="com.dm.shopb2b2c.crm.product.entity.JukeProduct">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="type" property="type" />
+        <result column="create_time" property="create_time" />
+        <result column="be_del" property="beDel" />
+    </resultMap>
+
+    <select id="findJukeProduct" resultMap="JukeProResultMap">
+        select * from juke_mall_goods_classify;
+    </select>
+
+</mapper>

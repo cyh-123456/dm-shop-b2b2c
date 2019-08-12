@@ -25,6 +25,9 @@ public class ShopGoodsType {
     private String seo_title;
     private String tree_path;
     private long parent_id;
+    private long juke_typeId;
+
+
 
     public long getId() {
         return id;
@@ -144,5 +147,13 @@ public class ShopGoodsType {
 
     public void setParent_id(long parent_id) {
         this.parent_id = parent_id;
+    }
+
+    public long getJuke_typeId() {
+        return juke_typeId;
+    }
+
+    public void setJuke_typeId(long juke_typeId) {
+        this.juke_typeId = juke_typeId;
     }
 }

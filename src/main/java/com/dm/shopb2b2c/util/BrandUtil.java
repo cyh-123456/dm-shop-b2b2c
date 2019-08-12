@@ -17,7 +17,7 @@ import java.util.List;
 public class BrandUtil {
 
     public static List<ShopBrand> getShopBrand(List<JukeBrand> list){
-        BrandSelma mapper=Selma.builder(BrandSelma.class).build();
+        //BrandSelma mapper=Selma.builder(BrandSelma.class).build();
         List<ShopBrand> mylist=new ArrayList<>();
         for (JukeBrand  jukeBrand:list) {
            ShopBrand shopBrand=new ShopBrand();
