@@ -3,6 +3,7 @@ package com.dm.shopb2b2c.shopec.brand.service.impl;
 import com.dm.shopb2b2c.shopec.brand.entity.ShopBrand;
 import com.dm.shopb2b2c.shopec.brand.mapper.ShopBrandMapper;
 import com.dm.shopb2b2c.shopec.brand.service.IShopBrandService;
+import com.dm.shopb2b2c.shopec.typeAndBrand.entity.ShopTypeAndBrand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -35,5 +36,10 @@ public class ShopBrandServiceImpl implements IShopBrandService {
     @Override
     public void delShopBrand() {
         shopBrandMapper.delAllBrand();
+    }
+
+    @Override
+    public long getShopDistributedBrandId(ShopTypeAndBrand shopTypeAndBrand) {
+        return shopBrandMapper.getDistributedBrandId(shopTypeAndBrand);
     }
 }

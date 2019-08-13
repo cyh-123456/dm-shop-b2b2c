@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  * @Classname: ShopGoodsTypeController
- * @Description： TODO
+ * @Description： 将CRM商品类别数据同步到商城
  * @Date: 2019/8/9 17:27
  * @Author: cyh
  */
@@ -45,19 +45,19 @@ public class ShopGoodsTypeController {
         sp.setVersion(0);
         sp.setGeneral_rate(0);
         sp.setGrade(0);
-        sp.setName("商品类型");
+        sp.setName("商品");
         sp.setSelf_rate(0);
         sp.setTree_path("0");
         sp.setParent_id(0);
-        sp.setJuke_typeId(0);
+        sp.setJuke_typeId(-1);
 
         //insert into product_category values(0,null,null,0,0,0,0,"商品",null,0,null,null,null,"0",0,0);
         iShopGoodsTypeService.addShopGoodsType(sp);
 
-        String typeNames[]=new String[]{"配件","电脑","穿戴","智能","保险","售后"};
-        int types[]=new int[]{11,12,13,14,15,16};
+        String typeNames[]=new String[]{"手机","配件","电脑","穿戴","智能","保险","售后"};
+        int types[]=new int[]{0,11,12,13,14,15,16};
 
-        long ids[]=new long[6];
+        long ids[]=new long[7];
         ShopGoodsType shopGoodsType=new ShopGoodsType();
         Sequence seq=new Sequence(1L);
         for (int i=0;i<typeNames.length;i++){
@@ -72,8 +72,8 @@ public class ShopGoodsTypeController {
             shopGoodsType.setName(typeNames[i]);
             shopGoodsType.setSelf_rate(0);
             shopGoodsType.setTree_path("0");
-
-            shopGoodsType.setJuke_typeId(0);
+            shopGoodsType.setParent_id(0);
+            shopGoodsType.setJuke_typeId(i);
             iShopGoodsTypeService.addShopGoodsType(shopGoodsType);
         }
 

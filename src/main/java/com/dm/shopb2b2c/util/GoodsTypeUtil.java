@@ -32,23 +32,26 @@ public class GoodsTypeUtil {
             sp.setName(jukeGoodsType.getName());
             sp.setTree_path("2");
            switch (jukeGoodsType.getType()){
-               case 11:
+               case 0:
                    sp.setParent_id(ids[0]);
                    break;
-               case 12:
+               case 11:
                    sp.setParent_id(ids[1]);
                    break;
-               case 13:
+               case 12:
                    sp.setParent_id(ids[2]);
                    break;
-               case 14:
+               case 13:
                    sp.setParent_id(ids[3]);
                    break;
-               case 15:
+               case 14:
                    sp.setParent_id(ids[4]);
                    break;
-               case 16:
+               case 15:
                    sp.setParent_id(ids[5]);
+                   break;
+               case 16:
+                   sp.setParent_id(ids[6]);
                    break;
            }
             sp.setJuke_typeId(jukeGoodsType.getId());

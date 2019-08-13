@@ -3,6 +3,7 @@ package com.dm.shopb2b2c.shopec.type.service.impl;
 import com.dm.shopb2b2c.shopec.type.entity.ShopGoodsType;
 import com.dm.shopb2b2c.shopec.type.mapper.ShopGoodsTypeMapper;
 import com.dm.shopb2b2c.shopec.type.service.IShopGoodsTypeService;
+import com.dm.shopb2b2c.shopec.typeAndBrand.entity.ShopTypeAndBrand;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,5 +26,10 @@ public class ShopGoodsTypeServiceImpl implements IShopGoodsTypeService {
     @Override
     public void addShopGoodsType(ShopGoodsType shopGoodsType){
         shopGoodsTypeMapper.addShopGoodsType(shopGoodsType);
+    }
+
+    @Override
+    public long getShopDisTypeId(ShopTypeAndBrand shopTypeAndBrand) {
+        return shopGoodsTypeMapper.getShopDisTypeId(shopTypeAndBrand);
     }
 }

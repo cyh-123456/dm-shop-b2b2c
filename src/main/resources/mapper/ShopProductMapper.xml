@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.dm.shopb2b2c.shopec.brand.mapper.ShopBrandMapper">
+<mapper namespace="com.dm.shopb2b2c.shopec.product.mapper.ShopProductMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="ShopBrandResultMap" type="com.dm.shopb2b2c.shopec.brand.entity.ShopBrand">
+    <!--<resultMap id="ShopProductResultMap" type="com.dm.shopb2b2c.shopec.brand.entity.ShopBrand">
         <id column="id" property="id" />
         <result column="created_date" property="created_date" />
         <result column="last_modified_date" property="last_modified_date"/>
@@ -14,16 +14,16 @@
         <result column="name" property="name" />
         <result column="type" property="type" />
         <result column="url" property="url" />
-        <result column="juke_brand_id" property="brand_id" />
-    </resultMap>
+        <result column="brand_id" property="brand_id" />
+    </resultMap>-->
 
-    <select id="findAllShopBrand" resultMap="ShopBrandResultMap">
-        select * from brand;
-    </select>
+    <!--<select id="findAllShopProduct" resultMap="ShopProductResultMap">
+        select * from Product;
+    </select>-->
 
     <!--添加数据-->
-    <insert id="addShopBrand" parameterType="com.dm.shopb2b2c.shopec.brand.entity.ShopBrand">
-        insert into brand(id,created_date,last_modified_date,version,orders,introduction,logo,name,type,url,juke_brand_id)
+    <!--<insert id="addShopBrand" parameterType="com.dm.shopb2b2c.shopec.brand.entity.ShopBrand">
+        insert into brand(id,created_date,last_modified_date,version,orders,introduction,logo,name,type,url,brand_id)
         values(
             #{id},
             #{created_date},
@@ -36,14 +36,10 @@
             #{type},
             #{url},
             #{brand_id})
-    </insert>
+    </insert>-->
 
-    <delete id="delAllBrand">
+    <!--<delete id="delAllBrand">
         delete  from brand
-    </delete>
+    </delete>-->
 
-
-    <select id="getDistributedBrandId" parameterType="com.dm.shopb2b2c.shopec.typeAndBrand.entity.ShopTypeAndBrand" resultType="LONG">
-        select id from brand where juke_brand_id=#{brand_id}
-    </select>
 </mapper>

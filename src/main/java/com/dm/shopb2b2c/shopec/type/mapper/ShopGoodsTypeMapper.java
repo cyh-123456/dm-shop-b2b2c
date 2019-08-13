@@ -1,6 +1,7 @@
 package com.dm.shopb2b2c.shopec.type.mapper;
 
 import com.dm.shopb2b2c.shopec.type.entity.ShopGoodsType;
+import com.dm.shopb2b2c.shopec.typeAndBrand.entity.ShopTypeAndBrand;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -14,4 +15,7 @@ public interface ShopGoodsTypeMapper {
 
     //添加类型
     public void addShopGoodsType(ShopGoodsType shopGoodsType);
+
+    //得到商品信息类别的分布式ID
+    public long getShopDisTypeId(ShopTypeAndBrand shopTypeAndBrand);
 }
