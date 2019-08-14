@@ -1,6 +1,7 @@
 package com.dm.shopb2b2c.shopec.brand.mapper;
 
 import com.dm.shopb2b2c.shopec.brand.entity.ShopBrand;
+import com.dm.shopb2b2c.shopec.product.entity.ShopProduct;
 import com.dm.shopb2b2c.shopec.typeAndBrand.entity.ShopTypeAndBrand;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -26,4 +27,7 @@ public interface ShopBrandMapper {
 
     //查询单个分布式ID
     public long getDistributedBrandId(ShopTypeAndBrand shopTypeAndBrand);
+
+    //查询单个分布式ID
+    public long getProBrandId(ShopProduct shopProduct);
 }

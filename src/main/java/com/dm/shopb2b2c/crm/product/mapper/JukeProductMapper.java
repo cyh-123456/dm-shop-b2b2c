@@ -14,5 +14,5 @@ import java.util.List;
 @Mapper
 public interface JukeProductMapper {
 
-    public List<JukeProduct> findJukeProduct();
+    public List<JukeProduct> findAllJukeProduct();
 }

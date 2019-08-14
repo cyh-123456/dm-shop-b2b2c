@@ -24,6 +24,6 @@ public class JukeProductServiceImpl implements IJukeProductService {
 
     @Override
     public List<JukeProduct> getJukeProduct() {
-        return jukeProductMapper.findJukeProduct();
+        return jukeProductMapper.findAllJukeProduct();
     }
 }

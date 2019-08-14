@@ -2,44 +2,97 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dm.shopb2b2c.shopec.product.mapper.ShopProductMapper">
 
-    <!-- 通用查询映射结果 -->
-    <!--<resultMap id="ShopProductResultMap" type="com.dm.shopb2b2c.shopec.brand.entity.ShopBrand">
-        <id column="id" property="id" />
-        <result column="created_date" property="created_date" />
-        <result column="last_modified_date" property="last_modified_date"/>
-        <result column="version" property="version"/>
-        <result column="orders" property="orders"/>
-        <result column="introduction" property="introduction" />
-        <result column="logo" property="logo" />
-        <result column="name" property="name" />
-        <result column="type" property="type" />
-        <result column="url" property="url" />
-        <result column="brand_id" property="brand_id" />
-    </resultMap>-->
 
-    <!--<select id="findAllShopProduct" resultMap="ShopProductResultMap">
-        select * from Product;
-    </select>-->
 
     <!--添加数据-->
-    <!--<insert id="addShopBrand" parameterType="com.dm.shopb2b2c.shopec.brand.entity.ShopBrand">
-        insert into brand(id,created_date,last_modified_date,version,orders,introduction,logo,name,type,url,brand_id)
+    <insert id="addShopProduct" parameterType="com.dm.shopb2b2c.shopec.product.entity.ShopProduct">
+        insert into product(
+        id,
+        created_date,
+        last_modified_date,
+        version,
+        caption,
+        cost,
+        hits,
+        introduction,
+        is_active,
+        is_delivery,
+        is_list,
+        is_marketable,
+        is_top,
+        keyword,
+        market_price,
+        max_commission,
+        memo,
+        month_hits,
+        month_hits_date,
+        month_sales,
+        month_sales_date,
+        name,
+        parameter_values,
+        price,
+        product_images,
+        sales,
+        score,
+        score_count,
+        sn,
+        specification_items,
+        total_score,
+        type,
+        unit,
+        week_hits,
+        week_hits_date,
+        week_sales,
+        week_sales_date,
+        weight,
+        brand_id,
+        product_category_id,
+        store_id,
+        store_product_category_id)
         values(
-            #{id},
-            #{created_date},
-            #{last_modified_date},
-            #{version},
-            #{orders},
-            #{introduction},
-            #{logo},
-            #{name},
-            #{type},
-            #{url},
-            #{brand_id})
-    </insert>-->
+        #{id},
+        #{createdDate},
+        #{lastModifiedDate},
+        #{version},
+        #{caption},
+        #{cost},
+        #{hits},
+        #{introduction},
+        #{isActive},
+        #{isDelivery},
+        #{isList},
+        #{isMarketable},
+        #{isTop},
+        #{keyword},
+        #{marketPrice},
+        #{maxCommission},
+        #{memo},
+        #{monthHits},
+        #{monthHitsDate},
+        #{monthSales},
+        #{monthSalesDate},
+        #{name},
+        #{parameterValues},
+        #{price},
+        #{productImages},
+        #{sales},
+        #{score},
+        #{scoreCount},
+        #{sn},
+        #{specificationItems},
+        #{totalScore},
+        #{type},
+        #{unit},
+        #{weekHits},
+        #{weekHitsDate},
+        #{weekSales},
+        #{weekSalesDate},
+        #{weight},
+        #{brandId},
+        #{productCategoryId},
+        #{storeId},
+        #{storeProductCategoryId})
+    </insert>
 
-    <!--<delete id="delAllBrand">
-        delete  from brand
-    </delete>-->
 
 </mapper>

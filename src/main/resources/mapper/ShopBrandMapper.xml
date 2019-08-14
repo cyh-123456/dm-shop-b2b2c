@@ -46,4 +46,8 @@
     <select id="getDistributedBrandId" parameterType="com.dm.shopb2b2c.shopec.typeAndBrand.entity.ShopTypeAndBrand" resultType="LONG">
         select id from brand where juke_brand_id=#{brand_id}
     </select>
+
+    <select id="getProBrandId" parameterType="com.dm.shopb2b2c.shopec.product.entity.ShopProduct" resultType="LONG">
+        select id from brand where juke_brand_id=#{brandId}
+    </select>
 </mapper>

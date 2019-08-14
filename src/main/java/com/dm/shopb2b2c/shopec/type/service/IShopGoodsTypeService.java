@@ -1,5 +1,6 @@
 package com.dm.shopb2b2c.shopec.type.service;
 
+import com.dm.shopb2b2c.shopec.product.entity.ShopProduct;
 import com.dm.shopb2b2c.shopec.type.entity.ShopGoodsType;
 import com.dm.shopb2b2c.shopec.typeAndBrand.entity.ShopTypeAndBrand;
 
@@ -13,4 +14,6 @@ public interface IShopGoodsTypeService {
     public void addShopGoodsType(ShopGoodsType shopGoodsType);
 
     public long getShopDisTypeId(ShopTypeAndBrand shopTypeAndBrand);
+
+    public long getProTypeId(ShopProduct shopProduct);
 }

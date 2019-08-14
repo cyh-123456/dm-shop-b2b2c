@@ -52,4 +52,8 @@
         select id from product_category where juke_typeId=#{type_id}
     </select>
 
+    <select id="getProTypeId" parameterType="com.dm.shopb2b2c.shopec.product.entity.ShopProduct" resultType="LONG">
+        select id from product_category where juke_typeId=#{productCategoryId}
+    </select>
+
 </mapper>

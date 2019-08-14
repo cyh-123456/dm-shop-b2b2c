@@ -1,5 +1,6 @@
 package com.dm.shopb2b2c.shopec.type.service.impl;
 
+import com.dm.shopb2b2c.shopec.product.entity.ShopProduct;
 import com.dm.shopb2b2c.shopec.type.entity.ShopGoodsType;
 import com.dm.shopb2b2c.shopec.type.mapper.ShopGoodsTypeMapper;
 import com.dm.shopb2b2c.shopec.type.service.IShopGoodsTypeService;
@@ -31,5 +32,10 @@ public class ShopGoodsTypeServiceImpl implements IShopGoodsTypeService {
     @Override
     public long getShopDisTypeId(ShopTypeAndBrand shopTypeAndBrand) {
         return shopGoodsTypeMapper.getShopDisTypeId(shopTypeAndBrand);
+    }
+
+    @Override
+    public long getProTypeId(ShopProduct shopProduct) {
+        return shopGoodsTypeMapper.getProTypeId(shopProduct);
     }
 }

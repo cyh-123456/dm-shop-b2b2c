@@ -4,15 +4,31 @@
 
     <!-- 查询映射结果 -->
     <resultMap id="JukeProResultMap" type="com.dm.shopb2b2c.crm.product.entity.JukeProduct">
-        <id column="id" property="id" />
-        <result column="name" property="name" />
-        <result column="type" property="type" />
+        <id column="goods_id" property="goods_id" />
+        <result column="goods_name" property="goods_name" />
+        <result column="desc_min" property="desc_min" />
+        <result column="desc" property="desc" />
+        <result column="img_icon" property="img_icon" />
+        <result column="img_list" property="img_list" />
+        <result column="status" property="status" />
+        <result column="price_sell" property="price_sell" />
+        <result column="price_old" property="price_old" />
+        <result column="price_act" property="price_act" />
+        <result column="begin_time" property="begin_time" />
+        <result column="end_time" property="end_time" />
+        <result column="order" property="order" />
+        <result column="extend_links" property="extend_links" />
+        <result column="brand_id" property="brand_id" />
+        <result column="model_id" property="model_id" />
+        <result column="sort" property="sort" />
+        <result column="be_del" property="be_del" />
         <result column="create_time" property="create_time" />
-        <result column="be_del" property="beDel" />
+
+
     </resultMap>
 
-    <select id="findJukeProduct" resultMap="JukeProResultMap">
-        select * from juke_mall_goods_classify;
+    <select id="findAllJukeProduct" resultMap="JukeProResultMap">
+        select * from juke_mall_goods_sys_new;
     </select>
 
 </mapper>
