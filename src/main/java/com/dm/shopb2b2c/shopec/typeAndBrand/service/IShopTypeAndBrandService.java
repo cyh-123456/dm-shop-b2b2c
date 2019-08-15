@@ -11,4 +11,6 @@ import com.dm.shopb2b2c.shopec.typeAndBrand.entity.ShopTypeAndBrand;
 public interface IShopTypeAndBrandService {
 
     public void addShopTypeAndBrand(ShopTypeAndBrand shopTypeAndBrand);
+
+    public long findTypeId(long brandId);
 }

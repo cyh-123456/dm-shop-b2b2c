@@ -52,12 +52,12 @@ public class ProductUtil {
             shopProduct.setWeekSalesDate(new Date());
             //测试品牌id
             shopProduct.setBrandId((long) jukePro.getBrand_id());
-            //测试类别id
+            //测试类别id   全部类别一样
             shopProduct.setProductCategoryId(192706956058255360L);
             //测试门店id
-            shopProduct.setStoreId(1L);
+            shopProduct.setStoreId(193419581008207872L);
             //测试门店分类id
-            shopProduct.setStoreProductCategoryId(3L);
+            shopProduct.setStoreProductCategoryId(1L);
             myList.add(shopProduct);
         }
         return myList;

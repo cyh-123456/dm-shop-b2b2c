@@ -27,4 +27,9 @@ public class ShopTypeAndBrandServiceImpl implements IShopTypeAndBrandService {
     public void addShopTypeAndBrand(ShopTypeAndBrand shopTB) {
         shopTypeAndBrandMapper.addShopTypeAndBrand(shopTB);
     }
+
+    @Override
+    public long findTypeId(long brandId) {
+        return shopTypeAndBrandMapper.findTypeIdByBrandId(brandId);
+    }
 }

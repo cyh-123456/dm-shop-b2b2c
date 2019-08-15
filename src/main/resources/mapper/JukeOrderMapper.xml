@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dm.shopb2b2c.crm.order.mapper.JukeOrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="JukeOrderResultMap" type="com.dm.shopb2b2c.crm.order.entity.JukeOrder">
+        <id column="id" property="id" />
+        <result column="gzhid" property="gzhid" />
+        <result column="pid" property="pid" />
+        <result column="store_id" property="storeId" />
+        <result column="fan_id" property="fanId" />
+        <result column="clerk_id" property="clerkId" />
+        <result column="order_id" property="orderId" />
+        <result column="order_sn" property="orderSn" />
+        <result column="out_order_sn" property="outOrderSn" />
+        <result column="imei" property="imei" />
+        <result column="price" property="price" />
+        <result column="sale_price" property="salePrice" />
+        <result column="final_price" property="finalPrice" />
+        <result column="profit" property="profit" />
+        <result column="cost" property="cost" />
+        <result column="num" property="num" />
+        <result column="customer_phone" property="customerPhone" />
+        <result column="customer_name" property="customerName" />
+        <result column="order_type" property="orderType" />
+        <result column="type" property="type" />
+        <result column="is_read" property="isRead" />
+        <result column="is_change" property="isChange" />
+        <result column="is_locus" property="isLocus" />
+        <result column="status" property="status" />
+        <result column="pay_remark_out" property="payRemarkOut" />
+        <result column="pay_remark_in" property="payRemarkIn" />
+        <result column="goodscode" property="goodscode" />
+        <result column="storecode" property="storecode" />
+        <result column="saleprice" property="saleprice" />
+        <result column="coachprice" property="coachprice" />
+        <result column="itemid" property="itemid" />
+        <result column="billid" property="billid" />
+        <result column="es_ref_sn" property="esRefSn" />
+        <result column="mex_json" property="mexJson" />
+        <result column="remark" property="remark" />
+        <result column="be_del" property="beDel" />
+        <result column="pay_status" property="payStatus" />
+        <result column="is_activate" property="isActivate" />
+        <result column="signature" property="signature" />
+        <result column="edit_time" property="editTime" />
+        <result column="create_time" property="createTime" />
+        <result column="re" property="re" />
+        <result column="b_status" property="bStatus" />
+        <result column="p_status" property="pStatus" />
+    </resultMap>
+    
+    <insert id="addJukeOrder" parameterType="com.dm.shopb2b2c.crm.order.entity.JukeOrder">
+        insert into juke_order(
+        id,
+        gzhid,
+        pid,
+        store_id,
+        fan_id,
+        clerk_id,
+        order_id,
+        order_sn,
+        out_order_sn,
+        imei,
+        price,
+        sale_price,
+        final_price,
+        profit,
+        cost,
+        num,
+        customer_phone,
+        customer_name,
+        order_type,
+        type,
+        is_read,
+        is_change,
+        is_locus,
+        status,
+        pay_remark_out,
+        pay_remark_in,
+        goodscode,
+        storecode,
+        saleprice,
+        coachprice,
+        itemid,
+        billid,
+        es_ref_sn,
+        mex_json,
+        remark,
+        be_del,
+        pay_status,
+        is_activate,
+        signature,
+        edit_time,
+        create_time,
+        re,
+        b_status,
+        p_status
+        ) values(
+
+        )
+    </insert>
+
+</mapper>

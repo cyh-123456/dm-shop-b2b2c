@@ -5,9 +5,12 @@
 
     <!--添加数据-->
     <insert id="addShopTypeAndBrand" parameterType="com.dm.shopb2b2c.shopec.typeAndBrand.entity.ShopTypeAndBrand">
-        insert  ignore product_category_brand(product_categories_id,brands_id) values(#{type_id},#{brand_id})
+        insert  ignore product_category_brand(product_categories_id,brands_id,juke_id) values(#{type_id},#{brand_id},#{juke_id})
     </insert>
 
+    <select id="findTypeIdByBrandId" resultType="LONG" parameterType="LONG">
+        select product_categories_id from product_category_brand where brands_id=#{brandId}
+    </select>
 
 
 </mapper>

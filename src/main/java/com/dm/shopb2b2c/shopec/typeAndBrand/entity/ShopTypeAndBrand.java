@@ -9,6 +9,15 @@ package com.dm.shopb2b2c.shopec.typeAndBrand.entity;
 public class ShopTypeAndBrand {
     private long type_id;
     private long brand_id;
+    private long juke_id;
+
+    public long getJuke_id() {
+        return juke_id;
+    }
+
+    public void setJuke_id(long juke_id) {
+        this.juke_id = juke_id;
+    }
 
     public long getType_id() {
         return type_id;

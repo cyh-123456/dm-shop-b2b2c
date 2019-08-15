@@ -12,4 +12,6 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface ShopTypeAndBrandMapper {
     public void addShopTypeAndBrand(ShopTypeAndBrand shopTypeAndBrand);
+
+    public long findTypeIdByBrandId(long brandId);
 }

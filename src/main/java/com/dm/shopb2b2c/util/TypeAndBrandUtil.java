@@ -20,6 +20,7 @@ public class TypeAndBrandUtil {
             ShopTypeAndBrand shopTypeAndBrand=new ShopTypeAndBrand();
             shopTypeAndBrand.setBrand_id(jukeTB.getJuke_brand_id());
             shopTypeAndBrand.setType_id(jukeTB.getJuke_type());
+            shopTypeAndBrand.setJuke_id(jukeTB.getJuke_id());
             myList.add(shopTypeAndBrand);
         }
         return  myList;

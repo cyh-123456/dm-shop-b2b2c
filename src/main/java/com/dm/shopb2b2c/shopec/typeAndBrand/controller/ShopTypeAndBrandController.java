@@ -50,15 +50,11 @@ public class ShopTypeAndBrandController {
         for (int i=0;i<spList.size();i++)
         {
             long brandId=iShopBrandService.getShopDistributedBrandId(spList.get(i));
-//            System.err.println(brandId+"_______________________________________________________________1");
             spList.get(i).setBrand_id(brandId);
-//            System.err.println(spList.get(i).getBrand_id()+"________________________________________________2");
 
             //spList.get(i).getType_id();//通过这个id去查询当商城商品类型的分布式id
             long typeId=iShopGoodsTypeService.getShopDisTypeId(spList.get(i));
-//            System.err.println(typeId+"________________________________________________3");
             spList.get(i).setType_id(typeId);
-//            System.err.println(spList.get(i).getType_id()+"________________________________________________4");
             shopTypeAndBrandService.addShopTypeAndBrand(spList.get(i));
         }
 

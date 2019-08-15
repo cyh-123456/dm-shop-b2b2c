@@ -46,9 +46,9 @@ public class CodeGen {
         mpg.setDataSource(dsc);
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();
-        //strategy.setTablePrefix(new String[] { "dm_" });// 此处可以修改为您的表前缀
+        strategy.setTablePrefix(new String[] { "juke_" });// 此处可以修改为您的表前缀
         strategy.setNaming(NamingStrategy.underline_to_camel);// 表名生成策略
-        strategy.setInclude(new String[]{"product"}); // 需要生成的表
+        strategy.setInclude(new String[]{"juke_order"}); // 需要生成的表
         mpg.setStrategy(strategy);
         // 包配置
         PackageConfig pc = new PackageConfig();
@@ -56,7 +56,7 @@ public class CodeGen {
         pc.setController("controller");
         pc.setService("service");
         pc.setServiceImpl("service.impl");
-        pc.setEntity("domain");
+        pc.setEntity("entity");
         pc.setMapper("mapper");
         mpg.setPackageInfo(pc);
 

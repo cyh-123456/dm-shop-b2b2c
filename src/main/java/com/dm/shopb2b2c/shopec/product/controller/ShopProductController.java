@@ -6,8 +6,10 @@ import com.dm.shopb2b2c.shopec.brand.service.IShopBrandService;
 import com.dm.shopb2b2c.shopec.product.entity.ShopProduct;
 import com.dm.shopb2b2c.shopec.product.service.IShopProductService;
 import com.dm.shopb2b2c.shopec.type.service.IShopGoodsTypeService;
+import com.dm.shopb2b2c.shopec.typeAndBrand.service.IShopTypeAndBrandService;
 import com.dm.shopb2b2c.util.ProductUtil;
 import com.dm.shopb2b2c.util.Sequence;
+import net.shopec.entity.Store;
 import org.minbox.framework.api.boot.plugin.datasource.annotation.DataSourceSwitch;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,7 +37,7 @@ public class ShopProductController {
     private IShopBrandService iShopBrandService;
 
     @Inject
-    private IShopGoodsTypeService iShopGoodsTypeService;
+    private IShopTypeAndBrandService iShopTypeAndBrandService;
 
     @DataSourceSwitch("juke")
     public List<JukeProduct> getData(){
@@ -47,6 +49,7 @@ public class ShopProductController {
         List<JukeProduct> jukeList=getData();
         List<ShopProduct> spList=ProductUtil.getAllProduct(jukeList);
         long brandId;
+        long typeID;
         for (int i=0;i<spList.size();i++){
             Sequence seq=new Sequence(1L);
             Sequence sequence=new Sequence(1L);
@@ -56,11 +59,13 @@ public class ShopProductController {
             brandId=iShopBrandService.getProBrandId( spList.get(i));
             //System.err.println(brandId+"__________________________________________2");
             spList.get(i).setBrandId(brandId);
-            //聚客商品无类型？
-            //long typeId=iShopGoodsTypeService.getProTypeId(spList.get(i));
+            //聚客商品无类型？目前所有商品设置的一个类别
+            //long typeId=.getProTypeId(spList.get(i));
+            //typeID=iShopTypeAndBrandService.findTypeId(brandId);
             //spList.get(i).setProductCategoryId(typeId);
             iShopProductService.addShopProduct( spList.get(i));
         }
+
 
         return  "ok";
     }
