@@ -101,4 +101,8 @@
         )
     </insert>
 
+    <update id="updateJukeOrder" parameterType="com.dm.shopb2b2c.crm.order.entity.JukeOrder">
+        update juke_order set ?=?
+    </update>
+
 </mapper>
